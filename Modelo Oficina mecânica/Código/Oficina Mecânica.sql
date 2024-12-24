@@ -19,9 +19,6 @@ CREATE TABLE Equipe (
 CREATE TABLE Equipe_Mecanico (
   Mecanico_idMecanico INTEGER UNSIGNED NOT NULL,
   Equipe_idEquipe INTEGER UNSIGNED NOT NULL,
-  idMecanico2 INTEGER UNSIGNED NULL,
-  idmecanico3 INTEGER UNSIGNED NULL,
-  idmecanico4 INTEGER UNSIGNED NULL,
   PRIMARY KEY(Mecanico_idMecanico, Equipe_idEquipe),
   INDEX Mecanico_has_Equipe_FKIndex1(Mecanico_idMecanico),
   INDEX Mecanico_has_Equipe_FKIndex2(Equipe_idEquipe)
@@ -50,9 +47,6 @@ CREATE TABLE principalCervico_outros (
   OrdemServico_idOrdemServico INTEGER UNSIGNED NOT NULL,
   tabelaPreco_idtabelaPreco INTEGER UNSIGNED NOT NULL,
   OrdemServico_Equipe_idEquipe INTEGER UNSIGNED NOT NULL,
-  codServico2 INTEGER UNSIGNED NULL,
-  codServico3 INTEGER UNSIGNED NULL,
-  codServico4 INTEGER UNSIGNED NULL,
   PRIMARY KEY(OrdemServico_idOrdemServico, tabelaPreco_idtabelaPreco, OrdemServico_Equipe_idEquipe),
   INDEX OrdemServico_has_tabelaPreco_FKIndex1(OrdemServico_idOrdemServico, OrdemServico_Equipe_idEquipe),
   INDEX OrdemServico_has_tabelaPreco_FKIndex2(tabelaPreco_idtabelaPreco)
